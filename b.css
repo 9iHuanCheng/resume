@@ -1,0 +1,45 @@
+/* 这是我自己重写的CSS */
+body{
+  margin: 0;
+  background: rgba(161, 102, 87, 0.514);
+}
+a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.877);
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.topNavBar{
+  margin-left: 23px;
+  margin-right:23px;
+}
+.topNavBar .logo{
+  font-family: 'Arial Black';
+  font-size: 24px;
+  padding-top: 9.6px;
+  padding-bottom: 9.6px;
+}
+.topNavBar .logo .rs{
+  color: rgb(232, 103, 107);
+  margin-right: 4px;
+}
+.topNavBar .logo .card{
+  color: rgb(154, 167, 162)
+}
+.topNavBar ul{
+  list-style: none;
+}
+.topNavBar ul li{
+  margin-left: 23px;
+  float: left;
+}
+.topNavBar ul li a{
+  border-bottom: 4px solid transparent;
+}
+.topNavBar ul li a:hover{
+  border-bottom-color: rgb(224, 101, 103);
+}
