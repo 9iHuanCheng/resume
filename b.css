@@ -1,21 +1,37 @@
 /* 这是我自己重写的CSS */
 body{
   margin: 0;
-  background: rgba(161, 102, 87, 0.514);
+  background: rgb(239, 239, 239);
 }
-a{
+a{  
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.877);
+  color: rgba(244, 248, 2, 0.966);
 }
 .clearfix::after{
   content: '';
   display: block;
   clear: both;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
+hr{
+  height: 0;
+  border: none;
+  border-top: 1px solid rgb(222, 222, 222);
+}
 .topNavBar{
-  margin-left: 23px;
-  margin-right:23px;
+  /* margin-left: 23px;
+  margin-right:23px; 这里的设置移到topNavBar-inner*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.topNavBar-inner{
+  /* padding: 0 23px; */
+  margin: 0 23px;/*这里的margin可以改为padding*/
 }
 .topNavBar .logo{
   font-family: 'Arial Black';
@@ -32,6 +48,7 @@ a{
 }
 .topNavBar ul{
   list-style: none;
+  padding: 16px 0;
 }
 .topNavBar ul li{
   margin-left: 23px;
@@ -42,4 +59,95 @@ a{
 }
 .topNavBar ul li a:hover{
   border-bottom-color: rgb(224, 101, 103);
+}
+.banner{
+  background-image: url(./img/rs-cover.jpg); 
+  height: 515px;
+  border: 1px solid red;
+  background-position: center center;
+  background-size: cover;
+}
+.banner .mask{
+  height: 515px;
+  background-color:rgba(0, 0, 0, 0.7);
+}
+
+.userCard{
+  /* border: 1.5px solid blue; */
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+}
+.userCard .welcome{
+  color: rgb(255, 255, 255);
+  background-color: rgb(232, 103, 107);
+  display: inline-block;
+  padding: 4px 16px;
+  line-height: 22px;
+  position: relative;
+  margin-bottom: 9px;
+}
+.userCard .welcome .triangle{
+  display: block;
+  border: 10px solid transparent;
+  width: 0;
+  border-left-color: rgb(232,103,107);
+  border-top-width: 0;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+}
+.userCard .picture{
+  float: left;
+}
+.userCard .profile{
+  float: left;
+  margin-left: 65px;
+  width: 470px;
+}
+.userCard .profile h1{
+  /* margin-top: 24px; */
+  margin-top: 18px;
+}
+.userCard .profile hr{
+  margin: 20px 0;
+}
+.userCard .pictureAndProfile{
+  padding: 50px;
+}
+.userCard dl dt,
+.userCard dl dd{
+  float: left;
+  padding: 5px 0;
+}
+.userCard dl dt{
+  width: 30%;
+  font-weight: bold;
+}
+.userCard dl dd{
+  width: 50%;
+  color: rgb(157,160 ,167 );
+}
+.userCard .media{
+  background: rgb(230, 104, 106);
+  color: rgb(230, 104, 106);
+  text-align: center;
+}
+.userCard .media a{
+  display: inline-block;
+  width: 45px;
+  line-height: 30px;
+  padding: 7px 0;
+  border-radius: 50%;
+  margin: 10px;
+}
+.userCard .media a:hover{
+  background-color: rgb(207, 93, 95)
+}
+.userCard svg{
+  width: 30px;
+  height: 30px;
+  fill: white;
+  vertical-align: top;
 }
