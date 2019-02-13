@@ -21,6 +21,12 @@ hr{
   border: none;
   border-top: 1px solid rgb(222, 222, 222);
 }
+ul,ol{
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
 .topNavBar{
   /* margin-left: 23px;
   margin-right:23px; 这里的设置移到topNavBar-inner*/
@@ -72,13 +78,16 @@ hr{
   height: 515px;
   background-color:rgba(0, 0, 0, 0.7);
 }
-
 .userCard{
   /* border: 1.5px solid blue; */
   max-width: 940px;
+  margin-top: -300px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  /* position: relative;
+  margin-top: -360px; 另外一种写法，感觉似乎没什么问题*/
 }
 .userCard .welcome{
   color: rgb(255, 255, 255);
@@ -151,4 +160,142 @@ hr{
   height: 30px;
   fill: white;
   vertical-align: top;
+}
+main .downloadResume-wrapper{
+  text-align: center;/* 第二种写法需要加一个p标签，最开始不用加 */
+}
+main  .downloadResume{
+  /* display: block;
+  font-size: 14px;
+  padding:21px 55px;
+  border: 1px solid red;
+  width:168px;
+  line-height: 16px;
+  margin: 32px auto;
+   text-align: center;这是最开始的写法 */
+  display: inline-block;
+  font-size: 14px;
+  padding: 21px 55px;
+  border: 1px solid rgb(205, 207, 209);
+  background: rgb(239, 239, 239);
+  line-height: 16px;
+  border-radius: 2px;
+  color: rgb(61, 68, 81);
+  font-weight: bold;
+  margin: 32px 0;
+  transition: box-shadow 0.3s;
+}
+main .downloadResume:hover{
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+}
+.self-introduction{
+  font-family: "楷体";
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+section.skills,
+section.portfolio{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+section.skills  h2,
+section.portfolio  h2{
+  color: rgb(61, 68, 81);
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+section.skills h3{
+  font-size: 14px;
+  line-height: 1.1;
+  padding-right: 40px;
+  
+}
+section.skills ol{
+  margin-top: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  padding: 42px 50px 0;
+}
+section.skills ol li{
+  float: left;
+  width: 48%;
+  box-sizing: border-box;  
+}
+section.skills ol li:nth-child(even){
+  float: right;
+}
+section.skills .progressBar{
+  height: 5px;
+  border-radius: 3px;
+  background-color: rgb(250, 225, 225);
+  margin: 4px 0 40px;
+}
+section.skills .progressBar .progress{
+  height: inherit;
+  width: 85%;
+  border-radius: 3px;
+  background-color: rgb(230, 104, 109);
+}
+section.portfolio{
+  text-align: center;
+  margin-bottom: 100px
+}
+section.portfolio nav ol{
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+section.portfolio nav ol li{
+  float: left;
+  margin-right: 40px;
+  cursor: pointer;
+}
+section.portfolio nav ol li:nth-child(3){
+  margin-right: 0;
+}
+section.portfolio nav{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 32px;
+}
+section.portfolio nav .bar{
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+section.portfolio nav .bar-inner{
+  height: inherit;
+  background-color: rgb(230, 104, 109);
+  border-radius: 3px;
+  transition: all 0.75s;
+}
+section.portfolio nav .bar.state-1 .bar-inner{
+  margin-left: 0;
+  width: 15%;
+}
+section.portfolio nav .bar.state-2 .bar-inner{
+  margin-left: 72px;
+  width: 15%;
+}
+section.portfolio nav .bar.state-3 .bar-inner{
+  margin-left: 143px;
+  width: 39%;
+}
+section.portfolio .works{
+  position: relative;
+  border: 1px solid red;
+}
+section.portfolio .works .big,
+section.portfolio .works .small{
+  position: absolute;
 }
